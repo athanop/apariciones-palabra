@@ -31,3 +31,8 @@ function estaLaPalabra(texto, palabra){
     }
 }
 
+/* para convertir todo el array de texto en lowerCase
+const lowerText = textoCompleto.map(element => {
+        return element.toLowerCase();
+      });
+*/ 
