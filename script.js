@@ -1,16 +1,18 @@
 function cantidadPalabraRepetida(){
     let textoCompleto = document.getElementById('texto').value.split(" ");
+    const lowerText = textoCompleto.map(element => {
+        return element.toLowerCase();
+      });
     let palabraABuscar = document.getElementById('palabra').value;
-    let cantidadDePalabrasDelTexto = textoCompleto.length; //tamaño total del texto ingresado
-    if(textoCompleto[0] == ""){
+    let cantidadDePalabrasDelTexto = lowerText.length; //tamaño total del texto ingresado
+    if(lowerText[0] == ""){
         alert("No pusiste ningún texto");
         document.getElementById("cantidad").value = "Valor indeterminado"
     }
     else{
-        document.getElementById("cantidad").value = "Apariciones: " + buscarPalabra(cantidadDePalabrasDelTexto, textoCompleto, palabraABuscar);
+        document.getElementById("cantidad").value = "Apariciones: " + buscarPalabra(cantidadDePalabrasDelTexto, lowerText, palabraABuscar);
     }
 }
-
 
 function buscarPalabra(cantPalabra, texto, palabra){
     let repetidas = 0;
@@ -31,8 +33,4 @@ function estaLaPalabra(texto, palabra){
     }
 }
 
-/* para convertir todo el array de texto en lowerCase
-const lowerText = textoCompleto.map(element => {
-        return element.toLowerCase();
-      });
-*/ 
+
