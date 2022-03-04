@@ -3,7 +3,7 @@ function cantidadPalabraRepetida(){
     const lowerText = textoCompleto.map(element => {
         return element.toLowerCase();
       });
-    let palabraABuscar = document.getElementById('palabra').value;
+    let palabraABuscar = document.getElementById('palabra').value.toLowerCase();
     let cantidadDePalabrasDelTexto = lowerText.length; //tamaño total del texto ingresado
     if(lowerText[0] == ""){
         alert("No pusiste ningún texto");
