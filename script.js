@@ -7,7 +7,7 @@ function cantidadPalabraRepetida(){
         document.getElementById("cantidad").value = "Valor indeterminado"
     }
     else{
-        document.getElementById("cantidad").value = "La cantidad es: " + buscarPalabra(cantidadDePalabrasDelTexto, textoCompleto, palabraABuscar);
+        document.getElementById("cantidad").value = "Apariciones: " + buscarPalabra(cantidadDePalabrasDelTexto, textoCompleto, palabraABuscar);
     }
 }
 
